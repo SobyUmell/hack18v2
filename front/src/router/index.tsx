@@ -1,13 +1,13 @@
 import { SignIn } from "../pages";
 export const privateRoutes = [
   {
-    path: "/sign-in",
+    path: "/",
     component: <SignIn></SignIn>,
   },
 ];
 export const publicRoutes = [
   {
-    path: "/sign-in",
+    path: "/",
     component: <SignIn></SignIn>,
   },
 ];

@@ -23,11 +23,6 @@ export const AppRouter = () => {
               <Route key={index} element={route.component} path={route.path} />
             )
           )}
-      {auth ? (
-        <Route path="*" element={<Navigate to={"/profile"} />} />
-      ) : (
-        <Route path="*" element={<Navigate to={"/auth-1"} />} />
-      )}
     </Routes>
   );
   // Route path='*' - будет переносить нас на базовую страницу
