@@ -1,24 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 type InitialState = {
-  text: string;
+  auth: Boolean;
 };
 
 const initialState: InitialState = {
-  text: "what",
+  auth: false,
 };
 
 export const tempSlice = createSlice({
-  name: "temp",
+  name: "auth",
   initialState,
   reducers: {
-    setText: (state, action) => {
-      state.text = action.payload.text;
+    setAuth: (state, action) => {
+      state.auth = action.payload.auth;
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setText } = tempSlice.actions;
+export const { setAuth } = tempSlice.actions;
 
 export default tempSlice.reducer;
