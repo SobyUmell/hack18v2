@@ -1,9 +1,46 @@
-import styles from './styles.module.scss'
-export const SignIn =() => {
-    return (
-        <div className={styles.container}>
-            asdasdafs
-            <>asdasfa</>
+import styles from "./styles.module.scss";
+import { headerImg } from "../../imgs";
+import { stick } from "../../imgs";
+import { Input, Button, CustomFooter } from "../ui";
+import { useState } from "react";
+export const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  return (
+    <>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+      </style>
+
+      <header className={styles.header}>
+        <img className={styles.header_img} src={headerImg} alt="error" />
+        <p>flux</p>
+      </header>
+      <div className={styles.container}>
+        <div className={styles.fluxImg}></div>
+        <div className={styles.auth}>
+          <p className={styles.auth_left}>Авторизация</p>
+          <img className={styles.stick} src={stick} alt="error" />
+          <p className={styles.auth_right}>Регистрация</p>
         </div>
-    )
-}
+        <form className={styles.form} action="">
+          <Input
+            onChange={(e: any) => setEmail(e.target.value)}
+            value={email}
+            text="Почта"
+            type="email"
+          ></Input>
+          <Input
+            onChange={(e: any) => setPassword(e.target.value)}
+            value={password}
+            text="Пароль"
+            type="password"
+          ></Input>
+          <Button text="Далее" type={"submit"}></Button>
+        </form>
+      </div>
+      <CustomFooter></CustomFooter>
+    </>
+  );
+};
