@@ -1,10 +1,8 @@
 import styles from './styles.module.scss'
-export const SignIn: React.FC =() => {
+export const SignIn =() => {
     return (
         <div className={styles.container}>
 
         </div>
     )
 }
-
-
