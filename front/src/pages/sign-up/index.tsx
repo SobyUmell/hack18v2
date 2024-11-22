@@ -3,13 +3,15 @@ import { headerImg } from "../../imgs";
 import { stick } from "../../imgs";
 import { Input, Button, CustomFooter } from "../ui";
 import { useState } from "react";
-export const SignIn = () => {
+export const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
   const swap = () => {
-    window.location.href = "/sign-up";
+    window.location.href = "/";
     setEmail("");
     setPassword("");
+    setName("");
   };
   return (
     <>
@@ -25,11 +27,11 @@ export const SignIn = () => {
       <div className={styles.container}>
         <div className={styles.fluxImg}></div>
         <div className={styles.auth}>
-          <p className={styles.auth_left}>Авторизация</p>
-          <img className={styles.stick} src={stick} alt="error" />
-          <p className={styles.auth_right} onClick={swap}>
-            Регистрация
+          <p className={styles.auth_left} onClick={swap}>
+            Авторизация
           </p>
+          <img className={styles.stick} src={stick} alt="error" />
+          <p className={styles.auth_right}>Регистрация</p>
         </div>
         <form className={styles.form} action="">
           <Input
@@ -37,6 +39,12 @@ export const SignIn = () => {
             value={email}
             text="Почта"
             type="email"
+          />
+          <Input
+            onChange={(e: any) => setName(e.target.value)}
+            value={name}
+            text="Имя"
+            type="text"
           />
           <Input
             onChange={(e: any) => setPassword(e.target.value)}

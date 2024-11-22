@@ -1,4 +1,4 @@
-import { SignIn } from "../pages";
+import { SignIn,SignUp } from "../pages";
 export const privateRoutes = [
   {
     path: "/",
@@ -9,5 +9,9 @@ export const publicRoutes = [
   {
     path: "/",
     component: <SignIn></SignIn>,
+  },
+  {
+    path: "/sign-up",
+    component: <SignUp></SignUp>,
   },
 ];
