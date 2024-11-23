@@ -23,7 +23,7 @@
   flex-direction: column;
   width: 100vw;
   height: calc(100vh - 18%);
-  font-family: "Urbanist";
+  font-family: "JetBrains";
   font-style: normal;
   font-weight: 200;
   font-size: 50px;
@@ -36,7 +36,7 @@
   color: #ffffff;
 }
 .p {
-  font-family: "Urbanist";
+  font-family: "JetBrains";
   font-style: normal;
   font-weight: 200;
   font-size: 50px;
@@ -48,8 +48,8 @@
 
   color: #ffffff;
 }
-.pWhite{
-  font-family: "Urbanist";
+.pWhite {
+  font-family: "JetBrains";
   font-style: normal;
   font-weight: 200;
   font-size: 50px;
@@ -68,9 +68,28 @@
   height: calc(100vh - 77vh);
   background: rgba(217, 217, 217, 0.1);
   border-radius: 8px;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+.messageEx {
+  position: relative;
+  margin-top: 2%;
+  width: 95%;
+  height: calc(100vh - 47vh);
+  background: rgba(217, 217, 217, 0.1);
+  border-radius: 8px;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+.messageWhiteEx {
+  position: relative;
+  margin-top: 2%;
+  width: 95%;
+  height: calc(100vh - 47vh);
+  background: rgba(217, 217, 217, 0.9);
+  border-radius: 8px;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 .message_p {
-  font-family: "Urbanist";
+  font-family: "JetBrains";
   font-style: normal;
   font-weight: 200;
   font-size: 30px;
@@ -82,16 +101,17 @@
   padding-left: 1%;
   color: #ffffff;
 }
-.messageWhite{
+.messageWhite {
   position: relative;
   margin-top: 2%;
   width: 95%;
   height: calc(100vh - 77vh);
   background: rgba(217, 217, 217, 0.9);
   border-radius: 8px;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 .message_pWhite {
-  font-family: "Urbanist";
+  font-family: "JetBrains";
   font-style: normal;
   font-weight: 200;
   font-size: 30px;

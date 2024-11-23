@@ -6,10 +6,29 @@ import { CustomSlider } from "../../widgets";
 export const Home = () => {
   const [mode, setMode] = useState(false);
   const [name, setName] = useState("Семён");
+  const [extend, setExtend] = useState(false);
   const [message, setMessage] = useState("На этой неделе вы закрыли 3 задачи ");
   useEffect(() => {
     console.log("Страница главного меню");
   });
+  const changeStyles = () => {
+    if(mode=== false){
+      if(extend===true){
+        return styles.messageEx;
+      }
+      else{
+        return styles.message;
+      }
+    }
+    else{
+      if(extend===true){
+        return styles.messageWhiteEx;
+      }
+      else{
+        return styles.messageWhite;
+      }
+    }
+  }
   return (
     <>
       <style>
@@ -21,13 +40,14 @@ export const Home = () => {
           <p className={!mode ? styles.p : styles.pWhite}>
             Приветствуем, {name}
           </p>
-          <CustomSlider mode={mode}></CustomSlider>
-          <div className={!mode ? styles.message : styles.messageWhite}>
+          {!extend ? <CustomSlider mode={mode}></CustomSlider> : <></>}
+          <div className={changeStyles()}>
             <p className={!mode ? styles.message_p : styles.message_pWhite}>
               {message}
             </p>
             <Button
               mode={mode}
+              onClick={()=>{setExtend(!extend)}}
               style={{
                 backgroundColor: "transparent",
                 position: "absolute",

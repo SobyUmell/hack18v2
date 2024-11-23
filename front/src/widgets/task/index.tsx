@@ -1,6 +1,9 @@
-import { access } from "fs";
 import styles from "./styles.module.scss";
-import { useState, useEffect } from "react";
+import { Chart } from "../diagram/Chart";
+import { createRef } from "react";
+import { useEffect } from "react";
+import React from "react";
+
 interface Props {
   status: string;
   date: string;
@@ -12,37 +15,31 @@ interface Props {
 
 export const Task = (props: Props) => {
   const {} = props;
+
   const checkstate = () => {
-    if(props.status === "green"){
-      if(props.mode===true){
-        return styles.container1White
-      }
-      else{
-        return styles.container1
+    if (props.status === "green") {
+      if (props.mode === true) {
+        return styles.container1White;
+      } else {
+        return styles.container1;
       }
     }
-    if(props.status !== "green"){
-      if(props.mode===true){
-        return styles.container2White
-      }
-      else{
-        return styles.container2
+    if (props.status !== "green") {
+      if (props.mode === true) {
+        return styles.container2White;
+      } else {
+        return styles.container2;
       }
     }
   };
+
   return (
     <>
       <style>
         @import
         url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
       </style>
-      <div
-        className={
-          props.status === "green"
-            ? checkstate()
-            : checkstate()
-        }
-      >
+      <div className={props.status === "green" ? checkstate() : checkstate()}>
         <h2 className={!props.mode ? styles.header : styles.headerWhite}>
           {props.name} {props.date}
         </h2>
@@ -66,6 +63,7 @@ export const Task = (props: Props) => {
               <pre> </pre>
               {props.acceptence}%
             </div>
+            <Chart></Chart>
           </div>
         ) : (
           <></>
