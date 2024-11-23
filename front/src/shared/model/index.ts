@@ -1,2 +1,2 @@
-export { default as tempReducer } from "./redux-slices/SmallTaskSlice";
-export type { useAppSelector, useAppDispatch } from "./redux-hooks";
+export { default as taskReducer } from "./redux-slices/TaskSlice";
+export { useAppSelector, useAppDispatch } from "./redux-hooks";

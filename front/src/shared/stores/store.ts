@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { tempReducer } from "../model";
+import { taskReducer } from "../model";
 
 const store = configureStore({
   reducer: {
-    temp: tempReducer,
+    task: taskReducer,
   },
 });
 
