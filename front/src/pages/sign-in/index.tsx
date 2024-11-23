@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import {  stick } from "../../imgs";
+import { stick } from "../../imgs";
 import { Input, Button, CustomFooter } from "../ui";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -37,15 +37,21 @@ export const SignIn = () => {
         url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
       </style>
 
-      <Header mode={mode}/>
+      <Header mode={mode} />
       <div className={!mode ? styles.container : styles.containerWhite}>
-        <div className={styles.fluxImg}></div>
+        <div className={!mode ? styles.fluxImg : styles.fluxImgWhite}></div>
         <div className={styles.auth}>
-          <p className={!mode ? styles.auth_left : styles.auth_leftWhite} onClick={auth}>
+          <p
+            className={!mode ? styles.auth_left : styles.auth_leftWhite}
+            onClick={auth}
+          >
             Авторизация
           </p>
           <img className={styles.stick} src={stick} alt="error" />
-          <p className={!mode ? styles.auth_right : styles.auth_rightWhite} onClick={swap}>
+          <p
+            className={!mode ? styles.auth_right : styles.auth_rightWhite}
+            onClick={swap}
+          >
             Регистрация
           </p>
         </div>
@@ -64,7 +70,13 @@ export const SignIn = () => {
             text="Пароль"
             type="password"
           />
-          <Button mode={mode} style={{}} onClick={auth} text="Далее" type={"submit"} />
+          <Button
+            mode={mode}
+            style={{}}
+            onClick={auth}
+            text="Далее"
+            type={"submit"}
+          />
         </form>
       </div>
       <CustomFooter setMode={setMode} mode={mode} />

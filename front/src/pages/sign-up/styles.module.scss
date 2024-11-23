@@ -41,6 +41,16 @@ p {
   height: 30%;
 }
 .fluxImg {
+  background-image: url("../../imgs/whiteFlux.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 3%;
+  width: 90%;
+  height: 35%;
+  cursor: pointer;
+}
+.fluxImgWhite{
   background-image: url("../../imgs/flux.png");
   background-size: contain;
   background-repeat: no-repeat;

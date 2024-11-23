@@ -29,9 +29,12 @@ export const SignUp = () => {
 
       <Header mode={mode} />
       <div className={!mode ? styles.container : styles.containerWhite}>
-        <div className={styles.fluxImg}></div>
+        <div className={mode ? styles.fluxImg : styles.fluxImgWhite}></div>
         <div className={styles.auth}>
-          <p className={!mode ? styles.auth_left : styles.auth_leftWhite} onClick={swap}>
+          <p
+            className={!mode ? styles.auth_left : styles.auth_leftWhite}
+            onClick={swap}
+          >
             Авторизация
           </p>
           <img className={styles.stick} src={stick} alt="error" />
