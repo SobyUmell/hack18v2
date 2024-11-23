@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 type InitialState = {
-  auth: Boolean;
+  tasks: SmallTask[] | LargeTask[];
 };
 
 const initialState: InitialState = {
-  auth: false,
+  tasks: [],
 };
 
 export const tempSlice = createSlice({
