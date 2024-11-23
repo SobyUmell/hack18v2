@@ -1,5 +1,6 @@
 import React from "react";
-import { SmallTask } from "../../../shared/model/types";
+import { type SmallTask } from "../../../shared/model/types";
+import s from "./SmallTask.module.scss";
 
 type Props = {
   task: SmallTask;
