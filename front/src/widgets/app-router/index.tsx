@@ -1,13 +1,17 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { privateRoutes, publicRoutes } from "../../router";
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 
 export const AppRouter = () => {
-  const auth = useSelector((state: any) => state.isAuth);
+  const auth = useSelector((state: any) => state.auth.isAuth);
   const dispatch = useDispatch();
   const setAuth = (value: any) => {
     dispatch({ type: "SET_AUTH", auth: value });
   };
+  useEffect(() => {
+    console.log(auth);
+  }, [auth]);
   return (
     <Routes>
       {auth
