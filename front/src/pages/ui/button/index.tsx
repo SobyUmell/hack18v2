@@ -4,6 +4,7 @@ interface Props {
   type: any;
   onClick: any;
   style: any;
+  mode: any;
 }
 
 export const Button = (props: Props) => {
@@ -14,7 +15,7 @@ export const Button = (props: Props) => {
       style={props.style}
       onClick={props.onClick}
       type={props.type}
-      className={styles.btn}
+      className={!props.mode ? styles.btn:styles.btnWhite}
     >
       {props.text}
     </button>

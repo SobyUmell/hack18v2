@@ -8,6 +8,19 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-family: "Urbanist";
+}
+.footerWhite{
+  position: absolute;
+  bottom: 0px;
+  height: 18%;
+  border-top: 1px solid black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Urbanist";
 }
 .footer_corp {
   display: flex;
@@ -17,8 +30,13 @@
 }
 .footer_img {
   width: 40%;
+  cursor: pointer;
 }
 .p {
+  transform: translate(0px, -10px);
+}
+.pWhite {
+  color: black;
   transform: translate(0px, -10px);
 }
 .footer_corp_links {

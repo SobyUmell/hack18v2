@@ -6,4 +6,5 @@ import gmail from "./gmail.svg";
 import tg from "./tg.svg";
 import vk from "./vk.svg";
 import inst from "./inst.svg";
-export { headerImg, fluxImg, stick, moon, gmail, tg, vk, inst };
+import whiteFlux from "./whiteFlux.png";
+export { headerImg, fluxImg, stick, moon, gmail, tg, vk, inst, whiteFlux };

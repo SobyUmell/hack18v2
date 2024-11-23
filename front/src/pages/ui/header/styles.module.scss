@@ -1,0 +1,21 @@
+.header {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+
+  font-family: "Sulphur Point";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+.header_img {
+  margin-right: 9%;
+  width: 30%;
+  height: 30%;
+}
