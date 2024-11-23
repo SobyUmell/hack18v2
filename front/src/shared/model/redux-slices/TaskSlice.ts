@@ -1,10 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {
-  type SmallTask,
-  type LargeTask,
-  type Task,
-  type Conban,
-} from "../types";
+import { type Task, type Conban } from "../types";
 
 type InitialState = {
   tasks: Task[];
@@ -13,7 +8,7 @@ type InitialState = {
 
 const initialState: InitialState = {
   tasks: [],
-  conbans: [],
+  conbans: [{ name: "what", conbanId: "what" }],
 };
 
 export const taskSlice = createSlice({
@@ -24,11 +19,9 @@ export const taskSlice = createSlice({
       state.tasks.push(action.payload.task);
     },
     delTask: (state, action) => {
-      const ntasks: Task[] = state.tasks.filter(
-        (task: SmallTask | LargeTask) => {
-          return task.taskId !== action.payload.targetId;
-        },
-      );
+      const ntasks: Task[] = state.tasks.filter((task: Task) => {
+        return task.taskId !== action.payload.targetId;
+      });
       state.tasks = ntasks;
     },
     addConban: (state, action) => {

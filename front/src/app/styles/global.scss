@@ -139,6 +139,10 @@ table {
   /* Firefox */
 }
 
+body {
+  font-family: "JetBrains Mono", monospace;
+}
+
 // other styles
 
 @import 'text.scss', 'variables.scss';

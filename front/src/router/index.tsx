@@ -1,4 +1,6 @@
 import { SignIn, SignUp, Home } from "../pages";
+import CreateTask from "../pages/create-task/ui/CreateTask";
+import TaskView from "../pages/task-view/ui/TaskView";
 export const privateRoutes = [
   {
     path: "/home",
@@ -13,5 +15,13 @@ export const publicRoutes = [
   {
     path: "/sign-up",
     component: <SignUp></SignUp>,
+  },
+  {
+    path: "/newtask",
+    component: <CreateTask />,
+  },
+  {
+    path: "/viewtask",
+    component: <TaskView />,
   },
 ];
