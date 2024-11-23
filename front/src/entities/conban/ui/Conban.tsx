@@ -12,13 +12,7 @@ const Conban = ({ data }: Props) => {
   const { isOver, setNodeRef } = useDroppable({
     id: uuid(),
   });
-  const tasks = useAppSelector((state) => state.task.tasks);
-
-  return (
-    <div ref={setNodeRef} className={s.conban}>
-      {}
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Conban;
