@@ -1,5 +1,10 @@
+h2 {
+  font-family: "JetBrains Mono";
+}
+*{
+  transition: width 2s, height 2s, background-color 2s, transform 2s,color 2s;
+}
 .container1White {
-  font-family: "Urbanist";
   font-style: normal;
   font-weight: 200;
   font-size: 50px;
@@ -52,7 +57,6 @@
   border-radius: 15px;
 }
 .container1 {
-  font-family: "Urbanist";
   font-style: normal;
   font-weight: 200;
   font-size: 50px;
@@ -106,7 +110,7 @@
 }
 .header {
   padding-top: 2%;
-  font-family: "Urbanist";
+
   font-style: normal;
   font-weight: 200;
   font-size: 30px;
@@ -120,7 +124,7 @@
 }
 .headerWhite {
   padding-top: 2%;
-  font-family: "Urbanist";
+
   font-style: normal;
   font-weight: 200;
   font-size: 30px;
@@ -136,7 +140,7 @@
   margin-top: 2%;
   width: 90%;
   height: 30%;
-  font-family: "Urbanist";
+
   font-style: normal;
   font-weight: 200;
   font-size: 16px;
@@ -147,7 +151,7 @@
   background: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
 }
-.description_textWhite{
+.description_textWhite {
   height: auto;
   margin-left: 5%;
   margin-top: 5%;
@@ -159,6 +163,7 @@
   margin-top: 5%;
 }
 .acceptence {
+font-family: 'JetBrains Mono';
   padding-left: 3%;
   padding-top: 3%;
   width: 90%;
@@ -167,7 +172,6 @@
   background: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
 
-  font-family: "Urbanist";
   font-style: normal;
   font-weight: 200;
   font-size: 19px;
@@ -180,7 +184,6 @@
 }
 .acceptence_text {
   display: flex;
-  
 }
 .task_footer {
   position: absolute;
@@ -197,8 +200,6 @@
   height: calc(100% - 36px - 30% - 40px - 25px);
   background: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
-
-  font-family: "Urbanist";
   font-style: normal;
   font-weight: 200;
   font-size: 19px;
@@ -210,7 +211,6 @@
   color: black;
 }
 .p {
-  font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -223,7 +223,6 @@
   color: #ffffff;
 }
 .pWhite {
-  font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;

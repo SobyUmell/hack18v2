@@ -3,32 +3,31 @@ import { CustomFooter } from "../ui";
 import { useEffect, useState } from "react";
 import { Button } from "../ui";
 import { CustomSlider } from "../../widgets";
+import { Graph } from "../../widgets/graph";
+import { noteBook } from "../../imgs";
 export const Home = () => {
   const [mode, setMode] = useState(false);
   const [name, setName] = useState("Семён");
   const [extend, setExtend] = useState(false);
-  const [message, setMessage] = useState("На этой неделе вы закрыли 3 задачи ");
+  const [message, setMessage] = useState(1);
   useEffect(() => {
     console.log("Страница главного меню");
   });
   const changeStyles = () => {
-    if(mode=== false){
-      if(extend===true){
+    if (mode === false) {
+      if (extend === true) {
         return styles.messageEx;
-      }
-      else{
+      } else {
         return styles.message;
       }
-    }
-    else{
-      if(extend===true){
+    } else {
+      if (extend === true) {
         return styles.messageWhiteEx;
-      }
-      else{
+      } else {
         return styles.messageWhite;
       }
     }
-  }
+  };
   return (
     <>
       <style>
@@ -41,21 +40,68 @@ export const Home = () => {
             Приветствуем, {name}
           </p>
           {!extend ? <CustomSlider mode={mode}></CustomSlider> : <></>}
-          <div className={changeStyles()}>
-            <p className={!mode ? styles.message_p : styles.message_pWhite}>
-              {message}
-            </p>
-            <Button
-              mode={mode}
-              onClick={()=>{setExtend(!extend)}}
-              style={{
-                backgroundColor: "transparent",
-                position: "absolute",
-                bottom: "6%",
-                right: "calc(50% - 15% / 2)",
-              }}
-              text="Обзор"
-            ></Button>
+          <div
+            className={changeStyles()}
+            style={!extend ? { paddingLeft: "15%" } : {}}
+          >
+            {!extend ? (
+              <>
+                <p className={!mode ? styles.message_p : styles.message_pWhite}>
+                  На этой неделе вы
+                  <br /> закрыли
+                </p>
+                <p
+                  className={!mode ? styles.message_p : styles.message_pWhite}
+                  style={{ fontSize: "70px", marginTop: "1.5%" }}
+                >
+                  {message + " "} Задачу
+                </p>
+                <p
+                  className={!mode ? styles.message_p : styles.message_pWhite}
+                  onClick={() => {
+                    setExtend(!extend);
+                  }}
+                  style={{
+                    width: "15%",
+                    fontSize: "30px",
+                    marginTop: "2.5%",
+                    cursor: "pointer",
+                  }}
+                >
+                  Подробнее
+                </p>
+              </>
+            ) : (
+              <></>
+            )}
+            {!extend ? (
+              <div
+                className={styles.message_img}
+                style={{ right: "15%" }}
+              ></div>
+            ) : (
+              <></>
+            )}
+
+            {extend ? <Graph></Graph> : <></>}
+
+            {extend ? (
+              <Button
+                mode={mode}
+                onClick={() => {
+                  setExtend(!extend);
+                }}
+                style={{
+                  backgroundColor: "transparent",
+                  position: "absolute",
+                  bottom: "6%",
+                  right: "calc(50% - 15% / 2)",
+                }}
+                text="Обзор"
+              ></Button>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>

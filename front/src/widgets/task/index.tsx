@@ -37,7 +37,7 @@ export const Task = (props: Props) => {
     <>
       <style>
         @import
-        url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+        url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
       </style>
       <div className={props.status === "green" ? checkstate() : checkstate()}>
         <h2 className={!props.mode ? styles.header : styles.headerWhite}>

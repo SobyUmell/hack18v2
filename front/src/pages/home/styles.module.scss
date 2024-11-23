@@ -22,34 +22,26 @@
   justify-content: center;
   flex-direction: column;
   width: 100vw;
-  height: calc(100vh - 18%);
-  font-family: "JetBrains";
+  height: calc(100vh);
+  font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 200;
   font-size: 50px;
   line-height: 60px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.05em;
 
   color: #ffffff;
 }
 .p {
-  font-family: "JetBrains";
   font-style: normal;
   font-weight: 200;
   font-size: 50px;
   line-height: 60px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.05em;
-
+  text-align: left;
   color: #ffffff;
 }
 .pWhite {
-  font-family: "JetBrains";
   font-style: normal;
   font-weight: 200;
   font-size: 50px;
@@ -60,66 +52,126 @@
   letter-spacing: 0.05em;
 
   color: black;
+  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
 }
 .message {
-  position: relative;
   margin-top: 2%;
   width: 95%;
-  height: calc(100vh - 77vh);
-  background: rgba(217, 217, 217, 0.1);
+  height: calc(100vh - 60vh);
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: column;
+  padding-left: 1%;
+  background: linear-gradient(
+    123.91deg,
+    rgba(0, 157, 255, 0.4) -5.58%,
+    rgba(217, 217, 217, 0.05) 104.7%
+  );
+  backdrop-filter: blur(125px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 15px;
   border-radius: 8px;
-  transition: width 2s, height 2s, background-color 2s, transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
 }
 .messageEx {
-  position: relative;
+  padding: 0px;
   margin-top: 2%;
   width: 95%;
-  height: calc(100vh - 47vh);
-  background: rgba(217, 217, 217, 0.1);
-  border-radius: 8px;
+  height: calc(100vh - 40vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(
+    123.91deg,
+    rgba(0, 157, 255, 0.4) -5.58%,
+    rgba(217, 217, 217, 0.05) 104.7%
+  );
+  backdrop-filter: blur(125px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 15px;
   transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 .messageWhiteEx {
-  position: relative;
   margin-top: 2%;
   width: 95%;
-  height: calc(100vh - 47vh);
-  background: rgba(217, 217, 217, 0.9);
+  height: calc(100vh - 40vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 1%;
+  background: linear-gradient(
+    123.91deg,
+    rgba(0, 157, 255, 0.4) -5.58%,
+    rgba(217, 217, 217, 0.05) 104.7%
+  );
+  backdrop-filter: blur(125px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 15px;
   border-radius: 8px;
   transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 .message_p {
-  font-family: "JetBrains";
+  text-align: left;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 53px;
+  margin-top: 3%;
   font-style: normal;
-  font-weight: 200;
-  font-size: 30px;
   line-height: 60px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.05em;
-  padding-left: 1%;
+  display: flex;
+  justify-content: left;
   color: #ffffff;
+  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
 }
 .messageWhite {
-  position: relative;
+  font-family: "JetBrains Mono";
   margin-top: 2%;
   width: 95%;
-  height: calc(100vh - 77vh);
-  background: rgba(217, 217, 217, 0.9);
+  height: calc(100vh - 60vh);
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: column;
+  padding-left: 1%;
+  background: linear-gradient(
+    123.91deg,
+    rgba(0, 157, 255, 0.4) -5.58%,
+    rgba(217, 217, 217, 0.05) 104.7%
+  );
+  backdrop-filter: blur(125px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 15px;
   border-radius: 8px;
-  transition: width 2s, height 2s, background-color 2s, transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
 }
 .message_pWhite {
-  font-family: "JetBrains";
+  font-family: "JetBrains Mono";
+  text-align: left;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 53px;
+  margin-top: 3%;
   font-style: normal;
-  font-weight: 200;
-  font-size: 30px;
   line-height: 60px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.05em;
-  padding-left: 1%;
+  display: flex;
+  justify-content: left;
   color: black;
+  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
+}
+.message_img {
+  position: absolute;
+  top: calc(100% - 90%);
+  right: 0px;
+  height: 80%;
+  width: 20%;
+  background-image: url("../../imgs/notebook.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
 }
