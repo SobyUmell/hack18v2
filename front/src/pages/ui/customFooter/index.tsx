@@ -1,7 +1,10 @@
 import styles from "./styles.module.scss";
 import { moon, tg, inst, gmail, vk } from "../../../imgs";
 
-interface Props {}
+interface Props {
+  setMode: any;
+  mode: any;
+}
 
 export const CustomFooter = (props: Props) => {
   const {} = props;
@@ -13,14 +16,19 @@ export const CustomFooter = (props: Props) => {
     "https://vk.com/concept_tag",
   ];
   return (
-    <footer className={styles.footer}>
+    <footer className={!props.mode ? styles.footer : styles.footerWhite}>
       <style>
         @import
         url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
       </style>
       <div className={styles.footer_corp}>
-        <img className={styles.footer_img} src={moon} alt="error" />
-        <p className={styles.p} style={{ transform: "xlate(0px, 15px)" }}>
+        <img
+          className={styles.footer_img}
+          onClick={()=>{props.setMode(!props.mode)}}
+          src={moon}
+          alt="error"
+        />
+        <p className={!props.mode ? styles.p : styles.pWhite} style={{ transform: "xlate(0px, 15px)" }}>
           concept
         </p>
       </div>

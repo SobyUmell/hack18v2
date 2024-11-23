@@ -4,6 +4,7 @@ interface Props {
   text: string;
   onChange: any;
   value: any;
+  mode: any;
 }
 
 export const Input = (props: Props) => {
@@ -11,11 +12,11 @@ export const Input = (props: Props) => {
 
   return (
     <div className={styles.container}>
-      <p className={styles.p}>{props.text}</p>
+      <p className={!props.mode ? styles.p : styles.pWhite}>{props.text}</p>
       <input
         value={props.value}
         onChange={props.onChange}
-        className={styles.input}
+        className={!props.mode ? styles.input : styles.inputWhite}
         type={props.type}
       />
     </div>
