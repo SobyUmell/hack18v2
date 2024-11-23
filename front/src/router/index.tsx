@@ -1,8 +1,8 @@
-import { SignIn,SignUp } from "../pages";
+import { SignIn, SignUp, Home } from "../pages";
 export const privateRoutes = [
   {
-    path: "/",
-    component: <SignIn></SignIn>,
+    path: "/home",
+    component: <Home></Home>,
   },
 ];
 export const publicRoutes = [

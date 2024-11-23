@@ -1,9 +1,16 @@
 import styles from "./styles.module.scss";
-import { headerImg } from "../../imgs";
-import { stick } from "../../imgs";
+import { headerImg, stick } from "../../imgs";
 import { Input, Button, CustomFooter } from "../ui";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 export const SignIn = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const setAuth = (value: any) => {
+    dispatch({ type: "SET_AUTH", isAuth: value });
+  };
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const swap = () => {
@@ -11,6 +18,16 @@ export const SignIn = () => {
     setEmail("");
     setPassword("");
   };
+  const auth = (e: any) => {
+    e.preventDefault();
+    console.log("Авторизуемся мальчики");
+    setAuth(true);
+    navigate("/home");
+  };
+  useEffect(() => {
+    console.log("Страница авторизации");
+  }, []);
+
   return (
     <>
       <style>
@@ -25,7 +42,9 @@ export const SignIn = () => {
       <div className={styles.container}>
         <div className={styles.fluxImg}></div>
         <div className={styles.auth}>
-          <p className={styles.auth_left}>Авторизация</p>
+          <p className={styles.auth_left} onClick={auth}>
+            Авторизация
+          </p>
           <img className={styles.stick} src={stick} alt="error" />
           <p className={styles.auth_right} onClick={swap}>
             Регистрация
@@ -44,7 +63,7 @@ export const SignIn = () => {
             text="Пароль"
             type="password"
           />
-          <Button text="Далее" type={"submit"} />
+          <Button style={{}} onClick={auth} text="Далее" type={"submit"} />
         </form>
       </div>
       <CustomFooter />

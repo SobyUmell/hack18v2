@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import { headerImg } from "../../imgs";
 import { stick } from "../../imgs";
 import { Input, Button, CustomFooter } from "../ui";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 export const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,6 +13,12 @@ export const SignUp = () => {
     setPassword("");
     setName("");
   };
+  const register = () => {
+    console.log("регистрируемся мальчики");
+  };
+  useEffect(() => {
+    console.log("Страница регистрации");
+  });
   return (
     <>
       <style>
@@ -52,7 +58,7 @@ export const SignUp = () => {
             text="Пароль"
             type="password"
           />
-          <Button text="Далее" type={"submit"} />
+          <Button style={{}} onClick={register} text="Далее" type={"submit"} />
         </form>
       </div>
       <CustomFooter />

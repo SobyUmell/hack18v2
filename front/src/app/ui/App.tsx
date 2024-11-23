@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-import { store } from "../../shared/stores";
+import { store } from "../../store";
 import "../styles/global.scss";
 import { AppRouter } from "../../widgets";
 
