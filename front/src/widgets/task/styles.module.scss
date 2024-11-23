@@ -1,3 +1,56 @@
+.container1White {
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 50px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 5%;
+  width: 85%;
+  height: 37vh;
+  background-color: green;
+  margin-left: 7%;
+
+  background: linear-gradient(
+    123.91deg,
+    rgba(21, 255, 0, 0.3) 100.58%,
+    rgba(217, 217, 217, 0.05) 104.7%
+  );
+  backdrop-filter: blur(125px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 15px;
+}
+.container2White {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  margin-top: 5%;
+  width: 85%;
+  height: 37vh;
+  background-color: red;
+  margin-left: 7%;
+
+  background: linear-gradient(
+    123.91deg,
+    rgba(255, 81, 0, 0.3) 100.58%,
+    rgba(217, 217, 217, 0.05) 104.7%
+  );
+  backdrop-filter: blur(125px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 15px;
+}
 .container1 {
   font-family: "Urbanist";
   font-style: normal;
@@ -65,6 +118,20 @@
   position: relative;
   color: #ffffff;
 }
+.headerWhite {
+  padding-top: 2%;
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  position: relative;
+  color: black;
+}
 .description {
   margin-top: 2%;
   width: 90%;
@@ -77,10 +144,14 @@
   display: flex;
   letter-spacing: 0.05em;
 
-  color: rgba(255, 255, 255, 0.7);
-
   background: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
+}
+.description_textWhite{
+  height: auto;
+  margin-left: 5%;
+  margin-top: 5%;
+  color: black;
 }
 .description_text {
   height: auto;
@@ -117,6 +188,26 @@
   width: 90%;
   bottom: 5px;
 }
+.acceptenceWhite {
+  padding-left: 3%;
+  padding-top: 3%;
+  width: 90%;
+  margin-top: 2%;
+  height: calc(100% - 36px - 30% - 40px - 25px);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 19px;
+  line-height: 18px;
+  display: flex;
+
+  letter-spacing: 0.05em;
+
+  color: black;
+}
 .p {
   font-family: "JetBrains Mono";
   font-style: normal;
@@ -129,4 +220,17 @@
   text-align: center;
   cursor: pointer;
   color: #ffffff;
+}
+.pWhite {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: black;
 }

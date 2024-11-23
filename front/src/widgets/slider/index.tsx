@@ -4,7 +4,9 @@ import styles from "./styles.module.scss";
 import { Task } from "../task";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-interface Props {}
+interface Props {
+  mode: any;
+}
 
 export const CustomSlider = (props: Props) => {
   const {} = props;
@@ -13,6 +15,7 @@ export const CustomSlider = (props: Props) => {
     <div className={styles.container}>
       <Slider {...settings}>
         <Task
+          mode={props.mode}
           description="что-то1"
           name="задача 1"
           date="21.03.23"
@@ -20,6 +23,7 @@ export const CustomSlider = (props: Props) => {
           acceptence={75}
         />
         <Task
+          mode={props.mode}
           description="что-то2"
           name="задача 2"
           date="21.04.23"
@@ -27,6 +31,7 @@ export const CustomSlider = (props: Props) => {
           acceptence={0}
         />
         <Task
+          mode={props.mode}
           description="что-то3"
           name="задача 3"
           date="21.05.23"

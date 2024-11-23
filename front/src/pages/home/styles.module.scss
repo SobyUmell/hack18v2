@@ -7,6 +7,15 @@
 
   align-items: center;
 }
+.containerWhite {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  align-items: center;
+}
 .wrapper {
   display: flex;
   align-items: center;
@@ -39,6 +48,19 @@
 
   color: #ffffff;
 }
+.pWhite{
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 50px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: black;
+}
 .message {
   position: relative;
   margin-top: 2%;
@@ -59,4 +81,25 @@
   letter-spacing: 0.05em;
   padding-left: 1%;
   color: #ffffff;
+}
+.messageWhite{
+  position: relative;
+  margin-top: 2%;
+  width: 95%;
+  height: calc(100vh - 77vh);
+  background: rgba(217, 217, 217, 0.9);
+  border-radius: 8px;
+}
+.message_pWhite {
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 30px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  padding-left: 1%;
+  color: black;
 }

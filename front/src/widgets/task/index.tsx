@@ -7,10 +7,29 @@ interface Props {
   name: string;
   description: string;
   acceptence: any;
+  mode: any;
 }
 
 export const Task = (props: Props) => {
   const {} = props;
+  const checkstate = () => {
+    if(props.status === "green"){
+      if(props.mode===true){
+        return styles.container1White
+      }
+      else{
+        return styles.container1
+      }
+    }
+    if(props.status !== "green"){
+      if(props.mode===true){
+        return styles.container2White
+      }
+      else{
+        return styles.container2
+      }
+    }
+  };
   return (
     <>
       <style>
@@ -19,17 +38,29 @@ export const Task = (props: Props) => {
       </style>
       <div
         className={
-          props.status === "green" ? styles.container1 : styles.container2
+          props.status === "green"
+            ? checkstate()
+            : checkstate()
         }
       >
-        <h2 className={styles.header}>
+        <h2 className={!props.mode ? styles.header : styles.headerWhite}>
           {props.name} {props.date}
         </h2>
         <div className={styles.description}>
-          <p className={styles.description_text}>{props.description}</p>
+          <p
+            className={
+              !props.mode
+                ? styles.description_text
+                : styles.description_textWhite
+            }
+          >
+            {props.description}
+          </p>
         </div>
         {props.acceptence !== null ? (
-          <div className={styles.acceptence}>
+          <div
+            className={!props.mode ? styles.acceptence : styles.acceptenceWhite}
+          >
             <div className={styles.acceptence_text}>
               <span>Готово </span>
               <pre> </pre>
@@ -40,8 +71,8 @@ export const Task = (props: Props) => {
           <></>
         )}
         <footer className={styles.task_footer}>
-          <p className={styles.p}>Обзор</p>
-          <p className={styles.p}>Закрыть</p>
+          <p className={!props.mode ? styles.p : styles.pWhite}>Обзор</p>
+          <p className={!props.mode ? styles.p : styles.pWhite}>Закрыть</p>
         </footer>
       </div>
     </>
