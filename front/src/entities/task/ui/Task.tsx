@@ -16,6 +16,7 @@ const Task = ({ task }: Props) => {
     <div
       className={s.task_conban}
       ref={setNodeRef}
+      id={task.taskId}
       {...listeners}
       {...attributes}
     >
