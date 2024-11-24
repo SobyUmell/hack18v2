@@ -7,6 +7,7 @@ export type Task = {
   tags: string[];
   subtasks: Record<string, Subtask>;
   status: string;
+  conbanId: string;
 };
 export type Subtask = {
   taskId: string;

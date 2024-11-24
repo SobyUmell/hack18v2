@@ -1,6 +1,8 @@
 import { SignIn, SignUp, Home } from "../pages";
 import CreateTask from "../pages/create-task/ui/CreateTask";
 import TaskView from "../pages/task-view/ui/TaskView";
+import { CalendarPage } from "../pages/calendar-page";
+import { ConbanPage } from "../pages/conban-page";
 export const privateRoutes = [
   {
     path: "/home",
@@ -23,5 +25,13 @@ export const publicRoutes = [
   {
     path: "/viewtask",
     component: <TaskView />,
+  },
+  {
+    path: "/calendar",
+    component: <CalendarPage />,
+  },
+  {
+    path: "/conban",
+    component: <ConbanPage />,
   },
 ];

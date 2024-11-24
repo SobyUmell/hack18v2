@@ -7,8 +7,26 @@ type InitialState = {
 };
 
 const initialState: InitialState = {
-  tasks: [],
-  conbans: [{ name: "what", conbanId: "what" }],
+  tasks: [
+    {
+      taskId: "task_1",
+      name: "one",
+      description: "description 1",
+      startDate: new Date(),
+      endDate: new Date(2024, 11, 25),
+      tags: ["one", "two", "three"],
+      subtasks: {
+        sub1: {
+          taskId: "sub1",
+          text: "sub1",
+          checked: false,
+        },
+      },
+      status: "in progress",
+      conbanId: "general_12345",
+    },
+  ],
+  conbans: [{ name: "Главная", conbanId: "general_12345" }],
 };
 
 export const taskSlice = createSlice({
@@ -17,6 +35,17 @@ export const taskSlice = createSlice({
   reducers: {
     addTask: (state, action) => {
       state.tasks.push(action.payload.task);
+    },
+    changeTaskConban: (state, action) => {
+      const mutated = state.tasks.map((task) => {
+        if (task.taskId === action.payload.taskId) {
+          return {
+            ...task,
+            conbanId: action.payload.conbanId,
+          };
+        }
+        return task;
+      });
     },
     delTask: (state, action) => {
       const ntasks: Task[] = state.tasks.filter((task: Task) => {
@@ -37,6 +66,7 @@ export const taskSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addTask, delTask } = taskSlice.actions;
+export const { addTask, delTask, changeTaskConban, addConban, delConban } =
+  taskSlice.actions;
 
 export default taskSlice.reducer;
