@@ -1,10 +1,8 @@
 import styles from "./styles.module.scss";
-import { CustomFooter } from "../ui";
+import { CustomFooter, Button } from "../ui";
 import { useEffect, useState } from "react";
-import { Button } from "../ui";
-import { CustomSlider } from "../../widgets";
-import { Graph } from "../../widgets/graph";
-import { noteBook } from "../../imgs";
+import { CustomSlider, NavBar, Graph } from "../../widgets";
+
 export const Home = () => {
   const [mode, setMode] = useState(false);
   const [name, setName] = useState("Семён");
@@ -28,6 +26,7 @@ export const Home = () => {
       }
     }
   };
+
   return (
     <>
       <style>
@@ -39,6 +38,8 @@ export const Home = () => {
           <p className={!mode ? styles.p : styles.pWhite}>
             Приветствуем, {name}
           </p>
+          <NavBar mode={mode} extend={extend} />
+
           {!extend ? <CustomSlider mode={mode}></CustomSlider> : <></>}
           <div
             className={changeStyles()}

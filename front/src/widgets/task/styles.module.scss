@@ -1,8 +1,8 @@
 h2 {
   font-family: "JetBrains Mono";
 }
-*{
-  transition: width 2s, height 2s, background-color 2s, transform 2s,color 2s;
+* {
+  transition: color 1s;
 }
 .container1White {
   font-style: normal;
@@ -163,7 +163,7 @@ h2 {
   margin-top: 5%;
 }
 .acceptence {
-font-family: 'JetBrains Mono';
+  font-family: "JetBrains Mono";
   padding-left: 3%;
   padding-top: 3%;
   width: 90%;
@@ -186,9 +186,11 @@ font-family: 'JetBrains Mono';
   display: flex;
 }
 .task_footer {
-  position: absolute;
   display: flex;
   justify-content: space-between;
+  margin-top: auto;
+  align-items: center;
+  margin-bottom: 1%;
   width: 90%;
   bottom: 5px;
 }
