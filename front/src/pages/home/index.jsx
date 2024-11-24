@@ -5,6 +5,7 @@ import { Button } from "../ui";
 import { CustomSlider } from "../../widgets";
 import { Graph } from "../../widgets/graph";
 import { noteBook } from "../../imgs";
+import { useNavigate } from "react-router-dom";
 export const Home = () => {
   const [mode, setMode] = useState(false);
   const [name, setName] = useState("Семён");
@@ -28,6 +29,7 @@ export const Home = () => {
       }
     }
   };
+  const nav = useNavigate();
   return (
     <>
       <style>
@@ -39,6 +41,29 @@ export const Home = () => {
           <p className={!mode ? styles.p : styles.pWhite}>
             Приветствуем, {name}
           </p>
+          {!extend ? (
+            <div className={styles.navbar}>
+              <Button
+                mode={mode}
+                style={{ marginRight: "10px", width: "35%" }}
+                text="создать"
+                onClick={() => {
+                  nav("/conban");
+                }}
+              />
+              <Button
+                mode={mode}
+                style={{ width: "35%" }}
+                text="ещё"
+                onClick={() => {
+                  nav("/calendar");
+                }}
+              />
+            </div>
+          ) : (
+            <></>
+          )}
+
           {!extend ? <CustomSlider mode={mode}></CustomSlider> : <></>}
           <div
             className={changeStyles()}
