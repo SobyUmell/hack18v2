@@ -1,0 +1,22 @@
+.conban {
+  width: 100%;
+  max-width: 400px;
+  min-height: 500px;
+  background-color: #212529;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+
+  .conban_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .conban_name {
+      color: #adb5bd;
+    }
+  }
+
+}

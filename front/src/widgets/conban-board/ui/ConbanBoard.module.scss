@@ -1,0 +1,23 @@
+.conban_board {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #050505;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 20px;
+
+  .add_conban_bar {
+    display: flex;
+    gap: 30px;
+  }
+
+  .conban_list {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

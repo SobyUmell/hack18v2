@@ -1,0 +1,84 @@
+.task_edit {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  font-family: 'JetBrains Mono';
+  background-color: #050505;
+  color: #fff;
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .title,
+  .description {
+    width: 100%;
+  }
+
+  .date {
+    display: flex;
+    gap: 20px;
+
+    .date_start {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .date_end {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+  }
+
+  .tags {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .conban {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+
+  .subtasks {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .create_task {
+      display: flex;
+      gap: 20px;
+      align-items: end;
+    }
+
+    .list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .subtask {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        .content {
+          flex: 1 1 100%;
+          display: flex;
+
+        }
+
+      }
+    }
+  }
+}
