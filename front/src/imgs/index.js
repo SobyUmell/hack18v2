@@ -7,4 +7,16 @@ import tg from "./tg.svg";
 import vk from "./vk.svg";
 import inst from "./inst.svg";
 import whiteFlux from "./whiteFlux.png";
-export { headerImg, fluxImg, stick, moon, gmail, tg, vk, inst, whiteFlux };
+import noteBook from "./notebook.png";
+export {
+  headerImg,
+  fluxImg,
+  stick,
+  moon,
+  gmail,
+  tg,
+  vk,
+  inst,
+  whiteFlux,
+  noteBook,
+};

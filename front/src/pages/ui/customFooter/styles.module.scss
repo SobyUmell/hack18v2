@@ -1,6 +1,6 @@
 .footer {
-  position: absolute;
-  bottom: 0px;
+  background-color: black;
+
   height: 18%;
   border-top: 1px solid white;
   width: 100%;
@@ -10,9 +10,7 @@
   flex-direction: column;
   font-family: "Urbanist";
 }
-.footerWhite{
-  position: absolute;
-  bottom: 0px;
+.footerWhite {
   height: 18%;
   border-top: 1px solid black;
   width: 100%;
