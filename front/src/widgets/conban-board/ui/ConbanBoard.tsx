@@ -35,7 +35,7 @@ const ConbanBoard = (props: Props) => {
         <TextField
           fullWidth
           id="standard-basic"
-          label="Название подзадачи"
+          label="Название доски"
           variant="standard"
           value={curts}
           onChange={handleConbanChange}

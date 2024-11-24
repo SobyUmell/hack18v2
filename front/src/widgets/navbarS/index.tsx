@@ -20,7 +20,7 @@ export const NavBar = (props: Props) => {
             style={{ marginRight: "10px", width: "35%" }}
             text="Создать"
             onClick={() => {
-              nav("/conban");
+              nav("/newtask");
             }}
           />
           <Button

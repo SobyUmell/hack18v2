@@ -6,9 +6,10 @@ import { type Conban as ConbanType } from "../../../shared/model/types";
 import { useAppDispatch, useAppSelector } from "../../../shared/model";
 import { DndContext } from "@dnd-kit/core";
 import Task from "../../task/ui/Task";
-import { Divider, IconButton } from "@mui/material";
+import { Button, Divider, IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { delConban } from "../../../shared/model/redux-slices/TaskSlice";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   data: ConbanType;
@@ -26,6 +27,10 @@ const Conban = ({ data }: Props) => {
   const deleteConban = () => {
     dispatch(delConban({ targetId: data.conbanId }));
   };
+  const nav = useNavigate();
+  const handleNewTask = () => {
+    nav("/newtask");
+  };
 
   return (
     <div className={s.conban} ref={setNodeRef}>
@@ -36,6 +41,9 @@ const Conban = ({ data }: Props) => {
         </IconButton>
       </div>
       <Divider />
+      <Button variant="contained" onClick={handleNewTask}>
+        НОВАЯ ЗАДАЧА
+      </Button>
       <div className={s.tasks}>
         {filtered.map((task) => {
           return <Task key={task.taskId} task={task} />;
