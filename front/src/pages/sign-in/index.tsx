@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "../ui/header";
 import { useSelector } from "react-redux";
+import AuthService from "../../services/AuthService";
 export const SignIn = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ export const SignIn = () => {
   const setMode = (value: any) => {
     dispatch({ type: "SET_MODE", mode: value });
   };
-  const mode = useSelector((state:any) => state.mode.mode);
+  const mode = useSelector((state: any) => state.mode.mode);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -34,7 +35,19 @@ export const SignIn = () => {
   useEffect(() => {
     console.log("Страница авторизации");
   }, []);
-
+  const login = async (email: any, password: any) => {
+    console.log("Попытка входа");
+    try {
+      const responce = await AuthService.login(email, password);
+      console.log(responce);
+      localStorage.setItem("token", responce.data.accessToken);
+      setAuth(true);
+      setPassword("");
+    } catch (e: any) {
+      setPassword("");
+      console.log(e.responce?.data?.message);
+    }
+  };
   return (
     <>
       <style>
@@ -48,7 +61,7 @@ export const SignIn = () => {
         <div className={styles.auth}>
           <p
             className={!mode ? styles.auth_left : styles.auth_leftWhite}
-            onClick={auth}
+            
           >
             Авторизация
           </p>
@@ -78,7 +91,7 @@ export const SignIn = () => {
           <Button
             mode={mode}
             style={{}}
-            onClick={auth}
+            onClick={(e: any) => login(email, password)}
             text="Далее"
             type={"submit"}
           />

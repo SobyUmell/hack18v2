@@ -6,7 +6,7 @@ import { Header } from "../ui/header";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-
+import AuthService from "../../services/AuthService";
 export const SignUp = () => {
   const dispatch = useDispatch();
   const setMode = (value: any) => {
@@ -23,12 +23,17 @@ export const SignUp = () => {
     setPassword("");
     setName("");
   };
-  const register = () => {
-    console.log("регистрируемся мальчики");
+  const registration = async (email: any, password: any) => {
+    console.log("Попытка регистрации");
+    try {
+      const responce = await AuthService.registration(email, password);
+      console.log(responce);
+      localStorage.setItem("token", responce.data.accessToken);
+      navigate("/");
+    } catch (e: any) {
+      console.log(e.responce?.data?.message);
+    }
   };
-  useEffect(() => {
-    console.log("Страница регистрации");
-  });
   return (
     <>
       <style>
@@ -76,7 +81,9 @@ export const SignUp = () => {
           <Button
             mode={mode}
             style={{}}
-            onClick={register}
+            onClick={() => {
+              registration(email, password);
+            }}
             text="Далее"
             type={"submit"}
           />
