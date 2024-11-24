@@ -5,6 +5,7 @@ import {
   useEdgesState,
   addEdge,
 } from "@xyflow/react";
+import { Navbar } from "../../widgets/navbar";
 
 import "@xyflow/react/dist/style.css";
 
@@ -24,14 +25,17 @@ export const Graph = () => {
   );
 
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
-      />
-    </div>
+    <>
+      <Navbar page={"graph"}></Navbar>
+      <div style={{ width: "100vw", height: "100vh" }}>
+        <ReactFlow
+          nodes={nodes}
+          edges={edges}
+          onNodesChange={onNodesChange}
+          onEdgesChange={onEdgesChange}
+          onConnect={onConnect}
+        />
+      </div>
+    </>
   );
 };
