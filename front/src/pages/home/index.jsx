@@ -1,11 +1,8 @@
 import styles from "./styles.module.scss";
-import { CustomFooter } from "../ui";
+import { CustomFooter, Button } from "../ui";
 import { useEffect, useState } from "react";
-import { Button } from "../ui";
-import { CustomSlider } from "../../widgets";
-import { Graph } from "../../widgets/graph";
-import { noteBook } from "../../imgs";
-import { useNavigate } from "react-router-dom";
+import { CustomSlider, NavBar, Graph } from "../../widgets";
+
 export const Home = () => {
   const [mode, setMode] = useState(false);
   const [name, setName] = useState("Семён");
@@ -29,7 +26,7 @@ export const Home = () => {
       }
     }
   };
-  const nav = useNavigate();
+
   return (
     <>
       <style>
@@ -41,28 +38,7 @@ export const Home = () => {
           <p className={!mode ? styles.p : styles.pWhite}>
             Приветствуем, {name}
           </p>
-          {!extend ? (
-            <div className={styles.navbar}>
-              <Button
-                mode={mode}
-                style={{ marginRight: "10px", width: "35%" }}
-                text="создать"
-                onClick={() => {
-                  nav("/conban");
-                }}
-              />
-              <Button
-                mode={mode}
-                style={{ width: "35%" }}
-                text="ещё"
-                onClick={() => {
-                  nav("/calendar");
-                }}
-              />
-            </div>
-          ) : (
-            <></>
-          )}
+          <NavBar mode={mode} extend={extend} />
 
           {!extend ? <CustomSlider mode={mode}></CustomSlider> : <></>}
           <div

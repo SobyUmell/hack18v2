@@ -1,4 +1,6 @@
 import { AppRouter } from "./app-router";
 import { CustomSlider } from "./slider";
 import { Task } from "./task";
-export { Task, AppRouter, CustomSlider };
+import {NavBar} from "./navbar";
+import { Graph } from "./graph";
+export { Task, AppRouter, CustomSlider, NavBar,Graph };
