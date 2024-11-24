@@ -18,7 +18,7 @@ export const NavBar = (props: Props) => {
             type={""}
             mode={props.mode}
             style={{ marginRight: "10px", width: "35%" }}
-            text="создать"
+            text="Создать"
             onClick={() => {
               nav("/conban");
             }}
@@ -27,7 +27,7 @@ export const NavBar = (props: Props) => {
             type={""}
             mode={props.mode}
             style={{ width: "35%" }}
-            text="ещё"
+            text="Календарь"
             onClick={() => {
               nav("/calendar");
             }}
