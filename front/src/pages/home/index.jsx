@@ -2,9 +2,13 @@ import styles from "./styles.module.scss";
 import { CustomFooter, Button } from "../ui";
 import { useEffect, useState } from "react";
 import { CustomSlider, NavBar, Graph } from "../../widgets";
-
+import { useDispatch,useSelector } from "react-redux";
 export const Home = () => {
-  const [mode, setMode] = useState(false);
+  const dispatch = useDispatch();
+  const setMode = (value) => {
+    dispatch({ type: "SET_MODE", mode: value });
+  };
+  const mode = useSelector((state) => state.mode.mode);
   const [name, setName] = useState("Семён");
   const [extend, setExtend] = useState(false);
   const [message, setMessage] = useState(1);

@@ -6,15 +6,20 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "../ui/header";
+import { useSelector } from "react-redux";
 export const SignIn = () => {
-  const [mode, setMode] = useState(false); // false - black theme, else bright theme
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const setAuth = (value: any) => {
     dispatch({ type: "SET_AUTH", isAuth: value });
   };
+  const setMode = (value: any) => {
+    dispatch({ type: "SET_MODE", mode: value });
+  };
+  const mode = useSelector((state:any) => state.mode.mode);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const swap = () => {
     navigate("/sign-up");
     setEmail("");

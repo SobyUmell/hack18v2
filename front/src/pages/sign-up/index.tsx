@@ -4,8 +4,15 @@ import { Input, Button, CustomFooter } from "../ui";
 import { useState, useEffect } from "react";
 import { Header } from "../ui/header";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+
 export const SignUp = () => {
-  const [mode, setMode] = useState(false);
+  const dispatch = useDispatch();
+  const setMode = (value: any) => {
+    dispatch({ type: "SET_MODE", mode: value });
+  };
+  const mode = useSelector((state: any) => state.mode.mode);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
