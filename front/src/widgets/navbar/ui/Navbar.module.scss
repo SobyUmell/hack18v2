@@ -1,0 +1,33 @@
+.navbar {
+  width: 100%;
+  background-color: #495057;
+  padding: 10px;
+
+  >.content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .menu {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      a {
+        color: #d7d7d7;
+        text-decoration: none;
+
+        .menu_item {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
