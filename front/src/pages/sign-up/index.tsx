@@ -3,13 +3,15 @@ import { stick } from "../../imgs";
 import { Input, Button, CustomFooter } from "../ui";
 import { useState, useEffect } from "react";
 import { Header } from "../ui/header";
+import { useNavigate } from "react-router-dom";
 export const SignUp = () => {
   const [mode, setMode] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const navigate = useNavigate();
   const swap = () => {
-    window.location.href = "/";
+    navigate("/");
     setEmail("");
     setPassword("");
     setName("");
